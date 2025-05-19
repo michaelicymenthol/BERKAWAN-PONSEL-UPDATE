@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+     <title>CV Berkawan Ponsel - Penjualan HP</title>
+     <link rel="stylesheet" href="style.css">
+      <script>
+        // Proteksi login
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "login.html";
+         }
+      </script>
+</head>
+<body>
+    <h1>CV Berkawan Ponsel</h1>
+    <button onclick="logout()">Logout</button>
+
+     <h3>Tambah Data HP</h3>
+     <form id="add-phone-form">
+         <input type="text" id="brand" placeholder="Merek HP" required />
+          <input type="number" id="stock" placeholder="Stok Awal" required />
+          <input type="number" id="sold" placeholder="Penjualan Bulanan" required />
+           <button type="submit">Tambah</button>
+         </form>
+
+         <h3>Data Penjualan</h3>
+         <table border="1">
+            <thead>
+                <tr>
+                    <th>Merek</th>
+                     <th>Stok</th>
+                     <th>Terjual</th>
+                     <th>Sisa</th>
+                </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+     </table>
+
+      <script src="app.js"></script>
+      </body>
+      </html>
